@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ede6de;
+    color: #281f19;
+}
+
+header nav {
+    padding: 20px;
+    background-color: #91714b;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+header nav a { border: #5c4330;
+    text-decoration: none;
+    color: #000000;
+    margin-right: 5px;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////head2 */
+.font-face{
+    padding: 20px;
+    background-color: #91714b;
+    color: #281f19;
+}
+
+.fa-star {
+  color: rgb(196, 196, 196);
+}
+.fa-star.checked {
+  color: rgb(167, 145, 32);
+}
+
+
+
+.recipe-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.recipe-header .date {
+    font-size: 14px;
+    color: #7a5d3a;
+}
+
+.recipe-header .description {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+span{
+    color: #7a5d3a;
+    font-family: Arial, sans-serif;
+}
+   
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.tags span {
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #7a5d3a;
+    font-family: Arial, sans-serif;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-section {
+    flex: 1; /* The image will take up one part of the available space */
+}
+
+.image-section img {
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    max-width: 600px; /* Set a maximum width for the image */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.text-section {
+    flex: 1; /* The text will take up two parts of the available space */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Relate menu */
+.related-products-section {
+  clear: both;
+  padding: 20px;
+  background-color: #f9f9f9;
+  position: relative;
+  width: 30%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.gallerybox {
+  white-space: nowrap;
+  overflow-x: hidden;
+  padding-left: 50px;
+  margin-right: 90px;
+  margin-left: 50px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,.next {
+  cursor: pointer;
+  position: absolute;
+  margin-right: 0px;
+  margin-left: 0px;
+  top: 975px;
+  width: auto;
+  padding: 15px;
+  margin-top: -50px;
+  color: #5c4330;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,.next:hover {
+  background-color: rgba(148, 109, 27, 0.6);
+}
+
+.row {
+  margin: 8px -16px;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Add padding BETWEEN each column */
+.row,.row > .column {
+  padding: 5px;
+}
+
+/* Create four equal columns that float next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  /* background-color: #f9f9f9; */
+  padding: 5px;
+  position: relative;
+  width: 78%;
+  
+}
+
+/* Add a transparency effect for thumbnail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Remove the fixed height and width */
+.content.fade img {
+    max-height: 400px; /* Optionally set a max-height */
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
+    display: block;   /* To avoid inline spacing issues */
+    margin: 0 auto; /* Center the image within its container */
+}
+
+
+
+.content.fade a {
+    color: #281f19;
+    display: inline-block;
+    text-decoration: none; /* Removes the default underline */
+}
+
+.content.fade a img {
+  color: #7A5D3A;
+  transition: transform 0.3s ease; /* Adds a smooth hover effect */
+}
+
+.content.fade a:hover img {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+}

@@ -1,0 +1,602 @@
+   
+    /* Topbar */
+
+   /*/////////////////////////////////////////////////////////////////////////dropdown//////////////////////////////////////////////////*/
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body{
+        background-color: rgba(254, 253, 238, 0.568);
+        font-family:Poppins;
+    }
+
+        a{
+            color: inherit;
+            text-decoration: none;
+            /*line under text*/
+        }
+        
+        ul{
+            list-style: none;
+        }
+        
+        .top-bar-content{
+          display: flex;
+          align-items: center;
+          justify-content:space-evenly;
+          padding: 50px;
+          background-color: #B8AFA2;
+        }
+        .nav__link{
+          color: #5C4330;
+          transition: all 0.2s;
+          font-size: 20px;
+          font-weight: 300;
+        }
+        
+        .nav__link:hover{
+          color: #7A5D3A;
+          display: block;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          text-decoration: underline;
+          text-decoration-thickness:5px ;
+          text-underline-offset: 10px  ;
+          width: 1000%;
+        }
+        .nav__list{
+          display: flex;
+          column-gap: 40px;
+        }
+        
+        .nav__list2{
+          display: flex;
+          column-gap: 40px;
+          margin-left: 250px;
+        }
+        .btn{
+          color: #281F19;
+          border-style: solid;
+          border-color:#7A5D3A;
+          font-weight:300;
+          padding: 10px;
+          border-radius: 60px;
+        }
+        
+        .btn:hover{
+          color: white;
+          background-color:#B8AFA2    ;
+        }
+
+        .top-banner{
+            width: 100%;
+            background-color: #5C4330;
+            color: white;
+            padding: 20px;
+        }
+        
+        .top-banner p{
+            margin-left: 60px;
+            font-size: medium;
+            font-weight:600;
+        }
+        /*///////////////////////////////////////////////////////////////////// dropdown ////////////////////////////////////////////////////////*/
+.sidenav {
+  height: 25%;
+  width: 250px;
+  position: absolute;
+  top: 670px;
+  right: 1250px;
+  background-color:#B8AFA2;
+  font-family:Poppins;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border: 2px solid #7A5D3A;
+  border-radius: 5px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #5C4330;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: white;
+}
+
+/* Main content */
+.main {
+  margin-left: 300px; /* Same as the width of the sidenav */
+  font-size: 16px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: rgba(254, 253, 238, 0.568);
+  color: #000000;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: rgba(254, 253, 238, 0.568);
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down { 
+  color: #5C4330;
+  float: right;
+  padding-right: 8px;
+}
+
+
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* ///////////////////////////////////////////////////slide0///////////////////////////////////////////////////////////////////////////////////// */
+        /* Slideshow container */
+        .slideshow-container0 {
+            max-width: 1550px;
+            position: relative;
+            margin: auto;
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        /* Slides */
+        .slides0 {
+            display: flex; /* Use flexbox to align slides horizontally */
+            transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+        }
+
+        /* Each slide */
+        .slide0 {
+            min-width: 100%; /* Ensure each slide takes full container width */
+            box-sizing: border-box;
+            position: relative; /* Make the slide a positioned element */
+        }
+
+        /* Next & previous buttons */
+        .prev0, .next0 {
+            border: 2px solid rgba(255, 255, 255, 0.8); /* Change to a 2px solid border */
+            background-color: none; /* Add a background color with some opacity */
+            cursor: pointer;
+            position: absolute;
+            right: 1420px;
+            top: 50%;
+            width: 35px; /* Set a fixed width */
+            height: 35px; /* Set a fixed height */
+            padding: 0;
+            margin-top: -25px; /* Half of height to vertically center */
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 50%; /* Make the buttons circular */
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s ease;
+        }
+
+        /* Position the "next button" to the right */
+        .next0 {
+            right: 2%;
+        }
+
+        /* On hover, add a black background color with a little bit of opacity */
+        .prev0:hover, .next0:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Caption text */
+        .text0 {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* The dots/bullets/indicators */
+        .dots-container0 {
+            position: absolute;
+            bottom: 15px; /* Adjust as needed to position the dots higher or lower */
+            width: 100%;
+            text-align: center;
+        }
+
+        .dot0 {
+            border-style: solid;
+            border-color: #ffffff;
+            cursor: pointer;
+            height: 8px;
+            width:8px;
+            margin: 0 2px;
+            background-color: none;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active0, .dot0:hover {
+            background-color: #ffffff;
+        }
+        
+        body {
+            font-family:Poppins;
+            background-color: rgba(254, 253, 238, 0.568);
+        }
+        .footer-container{
+            background-color: #B8AFA2;
+            padding-bottom: 4rem 0 4rem 0;
+        }
+        
+        .footer{
+            width: 80%;
+            height: 40vh;
+            background-color: #B8AFA2;
+            color: #5C4330;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        
+        .footer-heading{
+            display: flex;
+            flex-direction: column;
+            margin-right: 4rem;
+        }
+        
+        .footer-heading h2{
+            margin-bottom: 2rem;
+        }
+        .footer-heading a{
+            color: white;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-heading a:hover{
+            color: #281F19;
+            transition: 0.3 ease-out;
+        }
+        /* ///////////////////////////////////Search bar styling//////////////////////////////////////////////////////// */
+        .search-container {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-container input[type="text"] {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            font-weight: normal;
+            font-size: 13px;
+            border: 1px solid #b8afa2;
+            border-radius: 10px 0 0 10px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.12);
+            border-right: none;
+            outline: none; /* Removes the default outline on focus */
+        }
+         /* Add shadow effect on focus (click) */
+         .search-container input[type="text"]:focus {
+            border-color: #b8afa2; /* Keep the border color same as default */
+            box-shadow: 0 0 5px 2px #a88559 ; /* Adds the shadow effect */
+            outline: none; /* Ensures no default outline appears */
+        }
+
+        .search-container button {
+            padding: 0 20px;
+            font-size: 16px;
+            border: 1px solid #5C4330;
+            border-left: none;
+            background-color: #b8afa2;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+            outline: none; /* Removes default focus outline */
+        }
+
+        .search-container button:hover {
+            background-color: #b39775;
+        }
+        
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////slide1 */
+        /* Slideshow container */
+        .slideshow-container1 {
+            max-width: 1500px;
+            position: relative;
+            margin: auto;
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        /* Slides */
+        .slides1 {
+            display: flex; /* Use flexbox to align slides horizontally */
+            transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+        }
+
+        /* Each slide */
+        .slide1 {
+            min-width: 100%; /* Ensure each slide takes full container width */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between; /* Align items in slide */
+        }
+
+        .slide-item1 {
+            width: 33.33%;
+            box-sizing: border-box;
+            padding: 10px;
+            display: flex;
+            flex-direction: column; /* Stack image and caption vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .slide-image1 {
+            border-radius: 10px;
+            width: 100%; /* Make images fill their container */
+            display: block;
+        }
+
+        /* Captions */
+        .caption {
+            margin-top: 10px; /* Space between image and caption */
+            background: none; /* Semi-transparent background */
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%; /* Ensure caption width matches image */
+        }
+
+        /* Next & previous buttons */
+        .prev1, .next1 {
+            border: 2px solid #281F19; /* Change to a 2px solid border */
+            background-color: none; /* Add a background color with some opacity */
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 35px; /* Set a fixed width */
+            height: 35px; /* Set a fixed height */
+            padding: 0;
+            margin-top: -25px; /* Half of height to vertically center */
+            color: #281F19;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 50%; /* Make the buttons circular */
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s ease;
+        }
+
+        /* Position the "prev button" to the left */
+        .prev1 {
+            left: 15px;
+        }
+
+        /* Position the "next button" to the right */
+        .next1 {
+            right: 15px;
+        }
+
+        /* On hover, add a black background color with a little bit of opacity */
+        .prev1:hover, .next1:hover {
+             background-color: #b8afa2; /*พื้นที่วงกลม */
+        }
+
+        /* List of images */
+        .image-container1 {
+            display: flex; /* Hidden by default */
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .image-item1 {
+            border: none;
+            margin: 10px;
+            background-color: none;
+            padding: 10px;
+            text-align: center;
+            width: 30%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column; /* Stack image and caption vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .image-item1 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .image-item1 .caption {
+            margin-top: 10px; /* Add margin for space between image and caption */
+            font-size: 14px;
+            color: #000000;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .image-item1 {
+                width: 100%;
+            }
+        }
+        .slideshow-container2,.slideshow-container3,.slideshow-container4,.slideshow-container5,
+        .slideshow-container6,.slideshow-container7,.slideshow-container8,.slideshow-container9,.slideshow-container10 {
+            max-width: 1500px;
+            position: relative;
+            margin: auto;
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        /* Slides */
+        .slides2,.slides3,.slides4,.slides5,.slides6,.slides7,.slides8,.slides9,.slides10  {
+            display: flex; /* Use flexbox to align slides horizontally */
+            transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+        }
+
+        /* Each slide */
+        .slide2,.slide3,.slide4,.slide5,
+        .slide6,.slide7,.slide8,.slide9,.slide10 {
+            min-width: 100%; /* Ensure each slide takes full container width */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between; /* Align items in slide */
+        }
+
+        .slide-item2,.slide-item3,.slide-item4,.slide-item5,
+        .slide-item6,.slide-item7,.slide-item8,.slide-item9,.slide-item10 {
+            width: 33.33%;
+            box-sizing: border-box;
+            padding: 10px;
+            display: flex;
+            flex-direction: column; /* Stack image and caption vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .slide-image2,.slide-image3,.slide-image4,.slide-image5,
+        .slide-image6,.slide-image7,.slide-image8,.slide-image9,.slide-image10 {
+            width: 100%; /* Make images fill their container */
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Captions */
+        .caption2,.caption3,.caption4,.caption5,.caption6,.caption7,.caption8,.caption9,.caption10 {
+            margin-top: 10px; /* Space between image and caption */
+            background: none; /* Semi-transparent background */
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%; /* Ensure caption width matches image */
+        }
+
+        /* Next & previous buttons */
+        .prev2, .next2 ,.prev3, .next3,.prev4, .next4 ,.prev5, .next5,
+        .prev6, .next6 ,.prev7, .next7,.prev9, .next9,.prev10, .next10{
+            border: 2px solid #281F19; /* Change to a 2px solid border */
+            background-color: none; /* Add a background color with some opacity */
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 35px; /* Set a fixed width */
+            height: 35px; /* Set a fixed height */
+            padding: 0;
+            margin-top: -25px; /* Half of height to vertically center */
+             color: #281F19;/*///////////////////////////////////////////////////////////////> */
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 50%; /* Make the buttons circular */
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s ease;
+        }
+
+        /* Position the "prev button" to the left */
+        .prev2,.prev3,.prev4,.prev5,.prev6,.prev7,.prev9,.prev10 {
+            left: 15px;
+        }
+
+        /* Position the "next button" to the right */
+        .next2,.next3,.next4,.next5,.next6,.next7,.next9,.next10 {
+            right: 15px;
+        }
+
+        /* On hover, add a black background color with a little bit of opacity */
+        .prev2:hover, .next2:hover,.prev3:hover, .next3:hover, .prev4:hover, .next4:hover,.prev5:hover, .next5:hover
+        ,.prev6:hover, .next6:hover,.prev7:hover, .next7:hover, .prev8:hover, .next8:hover,.prev9:hover, .next9:hover,.prev10:hover, .next10:hover {
+            background-color: #b8afa2;
+        }
+
+        /* List of images */
+        .image-container2,.image-container3, .image-container4,.image-container5,
+        .image-container6,.image-container7, .image-container8,.image-container9,.image-container10 {
+            display: none; /* Hidden by default */
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .image-item2,.image-item3,.image-item4,.image-item5,.image-item6,.image-item7,.image-item8,.image-item9,.image-item10  {
+            border: none;
+            margin: 10px;
+            background-color: none;
+            padding: 10px;
+            text-align: center;
+            width: 30%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column; /* Stack image and caption vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .image-item2 img,.image-item3 img,.image-item4 img,.image-item5 img,
+        .image-item6 img,.image-item7 img,.image-item8 img,.image-item9 img,.image-item10 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 100px;
+        }
+ 
+        .image-item2 .caption2,.image-item3 .caption3,.image-item4 .caption4,.image-item5 .caption5,
+        .image-item6 .caption6,.image-item7 .caption7,.image-item8 .caption8,.image-item9 .caption9,.image-item10 .caption10  {
+            margin-top: 10px; /* Add margin for space between image and caption */
+            font-size: 14px;
+            color: #000000;
+            text-align: center;
+        }
+
+        @media (max-width: 300px) {
+            .image-item2 , .image-item3, .image-item4 , .image-item5, 
+            .image-item6 , .image-item7, .image-item8 , .image-item9, .image-item10{
+                width: 100%;
+            }
+        }
+        /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Click Picture */
+        .slide-item1 a, .slide-item2 a, .slide-item3 a, .slide-item4 a,.slide-item5 a,
+        .slide-item6 a, .slide-item7 a, .slide-item8 a,.slide-item9 a ,.slide-item10 a {
+            text-decoration: none; /* This removes the underline */
+             color: inherit; /* Ensures that the link inherits the text color from its parent */
+          }
+
+        .slide-item1 a:hover,.slide-item2 a:hover, .slide-item3 a:hover,.slide-item4 a:hover,.slide-item5 a:hover,
+        .slide-item6 a:hover,.slide-item7 a:hover, .slide-item8 a:hover,.slide-item9 a:hover,.slide-item10 a:hover{
+            text-decoration: none; /* Ensures no underline on hover */
+}
+
+        .slide-item1 a img,.slide-item2 a img,.slide-item3 a img,.slide-item4 a img,.slide-item5 a img,
+        .slide-item6 a img,.slide-item7 a img,.slide-item8 a img,.slide-item9 a img,.slide-item10 a img {
+             transition: transform 0.3s ease; /* Adds a smooth hover effect */
+            }
+
+        .slide-item1 a:hover img, .slide-item2 a:hover img, .slide-item3 a:hover img, .slide-item4 a:hover img, .slide-item5 a:hover img,
+        .slide-item6 a:hover img, .slide-item7 a:hover img, .slide-item8 a:hover img, .slide-item9 a:hover img, .slide-item10 a:hover img {
+                transform: scale(1.05); /* Slightly enlarges the image on hover */
+            }
